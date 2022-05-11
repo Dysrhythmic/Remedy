@@ -1,0 +1,8 @@
+/.elixir_ls
+/_build
+/deps
+
+.env
+
+todo.txt
+stream_urls.txt

@@ -1,0 +1,23 @@
+# Remedy
+An Elixir Discord bot made with [Nostrum](https://github.com/Kraigie/nostrum) for playing audio from various sources in voice channels.
+
+## Setup
+The app expects a bot token to be provided in a `.env` file in the following format: `DISCORD_BOT_TOKEN="TOKEN_HERE"`.
+
+After creating the `.env` file all you need to do is build the image from the Dockerfile and run it.
+
+If the bot isn't responding to message commands, ensure privileged gateway intents are enabled for the application in your Discord developer portal.
+
+## Usage
+The bot expects commands to be given via message events rather than slash commands. Commands it listens for are:
+* `!ping` - Responds with "pong".
+* `!summon` - Will find the voice channel the user sending the command is in and joins the channel.
+* `!leave` - Will leave the voice channel it is connected to.
+* `!play URL_HERE` - Will attempt to play the audio from the given URL. The URL can be [any that ffmpeg can read](https://www.ffmpeg.org/ffmpeg-protocols.html). E.g. `!play music/my favorite song.mp3` will play the file `my favorite song.mp3` if it exists at that path, and `!play http://streams.ilovemusic.de/iloveradio10.mp3` will attempt to play the audio from that HTTP stream.
+* `!stream URL_HERE` - Will attempt to stream the audio from the given livestream URL using [streamlink](https://streamlink.github.io/index.html). E.g. `!stream twitch.tv/day9tv` will attempt to stream the audio from [Day9tv's](https://www.twitch.tv/day9tv) Twitch channel.
+* `!stop` - Will stop playback.
+* `!pause` - Will pause the playback.
+* `!resume` - Will resume the playback.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
