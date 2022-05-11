@@ -1,6 +1,8 @@
 import Config
 
-DotenvParser.load_file(".env")
+if Config.config_env() == :dev do
+  DotenvParser.load_file(".env")
+end
 
 config :nostrum,
   gateway_intents: :all,

@@ -16,6 +16,4 @@ COPY ./mix.exs ./
 RUN mix deps.get
 COPY ./ ./
 
-ENV MIX_ENV=prod
-
 CMD ["mix", "run", "--no-halt"]
