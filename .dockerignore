@@ -1,10 +1,9 @@
-/.elixir_ls
-/_build
-/deps
+/.elixir_ls/
+/_build/
+/deps/
 
 .gitignore
+.formatter.exs
 README.md
 LICENSE
-
-.formatter.exs
 mix.lock
