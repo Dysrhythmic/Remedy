@@ -22,7 +22,7 @@ defmodule Remedy.MixProject do
   # Run "mix help deps" to learn about dependencies.
   def deps do
     [
-      {:dotenv_parser, "~> 2.0"},
+      {:dotenv_parser, "~> 2.0", only: :dev},
       {:nostrum, github: "Kraigie/nostrum"}
     ]
   end
