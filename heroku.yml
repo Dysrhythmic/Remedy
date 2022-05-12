@@ -1,7 +1,3 @@
-setup:
-  config:
-    MIX_ENV: prod
-
 build:
   docker:
     web: Dockerfile
