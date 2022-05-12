@@ -10,15 +10,14 @@ RUN pip install --upgrade streamlink
     
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
-RUN curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/bin/youtube-dl &&\
-    chmod a+rx /usr/bin/youtube-dl
+RUN pip install --upgrade youtube_dl
 
 RUN mix local.hex --force
 RUN mix local.rebar --force
 
-COPY ./mix.exs ./
-RUN mix deps.get
 COPY ./ ./
+RUN mix deps.get
+
 
 ENV MIX_ENV=prod
 
