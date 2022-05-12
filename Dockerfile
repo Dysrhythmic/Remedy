@@ -7,11 +7,12 @@ RUN apt-get -y update && apt-get install -y \
     python3-pip &&\
     ln -s /usr/bin/python3 /usr/bin/python &&\
     pip install --upgrade streamlink youtube_dl &&\
-    mix local.hex --force &&\
-    mix local.rebar --force
 
 COPY ./ ./
-RUN mix deps.get
+
+RUN mix local.hex --force &&\
+    mix local.rebar --force &&\
+    mix deps.get
 
 ENV MIX_ENV=prod
 
