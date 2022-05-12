@@ -8,7 +8,7 @@ RUN apt-get -y update && apt-get install -y \
 
 RUN pip install --upgrade streamlink
     
-RUN ln -s /usr/bin/python3 /usr/bin/python3
+RUN ln -s /usr/bin/python3 /usr/bin/python
 
 RUN curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/bin/youtube-dl &&\
     chmod a+rx /usr/bin/youtube-dl
