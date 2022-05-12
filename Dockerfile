@@ -8,8 +8,9 @@ RUN apt-get -y update && apt-get install -y \
     pip install --upgrade streamlink &&\
     ln -s /usr/bin/python3 /usr/bin/python &&\
     curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/bin/youtube-dl &&\
-    chmod a+rx /usr/bin/youtube-dl &&\
-    mix local.hex --force &&\
+    chmod a+rx /usr/bin/youtube-dl
+
+RUN mix local.hex --force &&\
     mix local.rebar --force
 
 COPY ./mix.exs ./
