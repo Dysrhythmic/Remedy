@@ -23,7 +23,7 @@ defmodule Remedy.MixProject do
   def deps do
     [
       {:dotenv_parser, "~> 2.0", only: :dev},
-      {:nostrum, github: "Kraigie/nostrum"}
+      {:nostrum, "~> 0.5.1"}
     ]
   end
 end
