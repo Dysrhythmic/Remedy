@@ -14,6 +14,4 @@ RUN mix local.hex --force &&\
     mix local.rebar --force &&\
     mix deps.get
 
-ENV MIX_ENV=prod
-
 CMD ["mix", "run", "--no-halt"]
