@@ -6,10 +6,9 @@ RUN apt-get -y update && apt-get install -y \
     ffmpeg \
     python3-pip &&\
     ln -s /usr/bin/python3 /usr/bin/python &&\
-    pip install --upgrade streamlink youtube_dl
-
-RUN mix local.hex --force
-RUN mix local.rebar --force
+    pip install --upgrade streamlink youtube_dl &&\
+    mix local.hex --force &&\
+    mix local.rebar --force
 
 COPY ./ ./
 RUN mix deps.get
