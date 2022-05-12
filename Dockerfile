@@ -6,7 +6,7 @@ RUN apt-get -y update && apt-get install -y \
     ffmpeg \
     python3-pip &&\
     ln -s /usr/bin/python3 /usr/bin/python &&\
-    pip install --upgrade streamlink youtube_dl &&\
+    pip install --upgrade streamlink youtube_dl
 
 COPY ./ ./
 
