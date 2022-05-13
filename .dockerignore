@@ -2,6 +2,7 @@
 /_build/
 /deps/
 
+.env.example
 .gitignore
 .formatter.exs
 README.md
