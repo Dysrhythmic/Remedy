@@ -1,6 +1,8 @@
 # Remedy
 An Elixir Discord bot made with [Nostrum](https://github.com/Kraigie/nostrum) for playing audio from various sources in voice channels.
 
+[Invite to your server](https://discord.com/api/oauth2/authorize?client_id=961767181920645120&permissions=2184252416&scope=bot).
+
 ## Setup
 When run in a dev environment, the app expects a bot token to be provided in a `.env` file in the following format: `DISCORD_BOT_TOKEN="TOKEN_HERE"`. You can add your bot token to the `.env.example` file and rename it to `.env`.
 
