@@ -2,7 +2,7 @@
 An Elixir Discord bot made with [Nostrum](https://github.com/Kraigie/nostrum) for playing audio from various sources in voice channels.
 
 ## Setup
-When run in a dev environment, the app expects a bot token to be provided in a `.env` file in the following format: `DISCORD_BOT_TOKEN="TOKEN_HERE"`. You can add your bot token to the `.env.example` file and renamen it to `.env`.
+When run in a dev environment, the app expects a bot token to be provided in a `.env` file in the following format: `DISCORD_BOT_TOKEN="TOKEN_HERE"`. You can add your bot token to the `.env.example` file and rename it to `.env`.
 
 Next you just need to build the Docker image and run it. Use `docker build -f Dockerfile.dev .` to build the image in a dev environment where it is receiving the bot token from a `.env` file.
 
