@@ -16,4 +16,6 @@ COPY ./mix.exs ./
 RUN mix deps.get
 COPY ./ ./
 
-CMD ["mix", "run", "--no-halt"]
+RUN mix compile
+
+CMD ["iex", "-S", "mix"]

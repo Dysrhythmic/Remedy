@@ -4,7 +4,7 @@ An Elixir Discord bot made with [Nostrum](https://github.com/Kraigie/nostrum) fo
 ## Setup
 When run in a dev environment, the app expects a bot token to be provided in a `.env` file in the following format: `DISCORD_BOT_TOKEN="TOKEN_HERE"`. You can add your bot token to the `.env.example` file and rename it to `.env`.
 
-Next you just need to build the Docker image and run it. Use `docker build -f Dockerfile.dev .` to build the image in a dev environment where it is receiving the bot token from a `.env` file.
+Next you just need to build the Docker image and run it. Use `docker build -f Dockerfile.dev .` to build the image in a dev environment where it is receiving the bot token from the `.env` file. Once built, run it with `docker run -it IMAGE_ID_HERE`. Since the `Dockerfile.dev` file builds the image with a default command to run the app in an `iex` session, the `-it` arguments should be used in the `docker run` command to keep the container open so you can interact with it. If this behavior is undesirable then you can change the line `CMD ["iex", "-S", "mix"]` of the `Dockerfile.dev` file to be `CMD ["mix", "run", "--no-halt"]` instead.
 
 If the bot isn't responding to message commands, ensure privileged gateway intents are enabled for the application in your Discord developer portal.
 
