@@ -10,10 +10,12 @@ RUN apt-get -y update && apt-get install -y \
 
 COPY ./ ./
 
+ENV MIX_HOME=/opt/mix
+ENV MIX_ENV=prod
+
 RUN mix local.hex --force &&\
     mix local.rebar --force &&\
-    mix deps.get
-
-ENV MIX_ENV=prod
+    mix deps.get &&\
+    mix compile
 
 CMD ["mix", "run", "--no-halt"]
